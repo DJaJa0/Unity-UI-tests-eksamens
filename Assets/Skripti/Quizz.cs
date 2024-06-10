@@ -35,64 +35,74 @@ public class Quizz : MonoBehaviour
         {
             new Question
             {
-                questionText = "Which components are necessary for a Unity UI Button to function?",
-                answers = new string[] { "Button Component", "Text Component", "Canvas Component", "EventSystem Component" },
-                correctAnswers = new int[] { 0, 2, 3 }
+                questionText = "Ko var skaitīt kā Unity UI elementu?",
+                answers = new string[] { "Pogu", "Teksta lauku", "Bīdjoslu", "Zīmulis" },
+                correctAnswers = new int[] { 0, 1, 2 }
             },
             new Question
             {
-                questionText = "How can you make a UI Text bold in Unity?",
-                answers = new string[] { "Using the Bold tag", "Using the Rich Text feature", "Using the Text component's style settings", "Using a Bold Font" },
-                correctAnswers = new int[] { 0, 1, 3 }
+                questionText = "Kas ir Unity UI?",
+                answers = new string[] { "Lietotāja saskarne", "Videospēle", "User Interface", "Mājaslapa" },
+                correctAnswers = new int[] { 0, 2 }
             },
             // Pievienojiet vēl 8 jautājumus
             new Question
             {
-                questionText = "What is the default layer for UI elements in Unity?",
-                answers = new string[] { "Default", "UI", "User Interface", "Overlay" },
-                correctAnswers = new int[] { 1 }
+                questionText = "Ko dara Input lauks?",
+                answers = new string[] { "nodrošina teksta ievadi", "Ļauj aizvērt Unity", "To pašu ko poga", 
+                                        "nodrošina ciparu ievadi" },
+                correctAnswers = new int[] { 0, 3 }
             },
             new Question
             {
-                questionText = "Which component is used to handle user input in Unity?",
-                answers = new string[] { "Input Manager", "Event System", "Canvas", "Graphic Raycaster" },
+                questionText = "Ko dara Dropdown UI elements?",
+                answers = new string[] { "Izdēš GitBash", "Nodrošina izkrītošo sarakstu attēliem", 
+                                       "Ļauj lietotājiem izvēlēties vērtības no iepriekš definētām opcijām.", 
+                                       "Nodrošina teksta ievadi"},
+                correctAnswers = new int[] { 1, 2 }
+            },
+            new Question
+            {
+                questionText = "Vai veidojot spēli ir obligāti jāizmanto skripti?",
+                answers = new string[] { "Var neizmantot", "Jā, ir", "Skripti var uzlabot spēles funkcionalitāti, bet nav obligāti",
+                                        "Skriptus vispār neizmanto" },
+                correctAnswers = new int[] { 0, 2 }
+            },
+            new Question
+            {
+                questionText = "Ko parasta dara ar Slider UI elementu?",
+                answers = new string[] { "Pievieno bildes, pavelkot", "Ievada tekstu", 
+                                        "Maina objekta rotāciju", "Maina objekta izmēru" },
+                correctAnswers = new int[] { 2, 3 }
+            },
+            new Question
+            {
+                questionText = "Vai parasti norāda skriptu references uz nepieciešamajiem objektiem?",
+                answers = new string[] { "Nē, tas notiek automātiski", "Jā", "Nenorāda", "Var nenorādīt, ja neizmanto" },
                 correctAnswers = new int[] { 1, 3 }
             },
             new Question
             {
-                questionText = "How do you anchor a UI element to the center of the screen?",
-                answers = new string[] { "Set anchor presets to middle center", "Set pivot to (0.5, 0.5)", "Set position to (0, 0)", "Use RectTransform component" },
-                correctAnswers = new int[] { 0, 1, 3 }
+                questionText = "Kā var mainīt UI elementu dizainu?",
+                answers = new string[] { "Caur skriptiem", "Caur Unity vizuālo redaktoru", "Caur skriptiem un Unity vizuālo redaktoru",
+                                        "Java programmēšanas valodā" },
+                correctAnswers = new int[] { 0, 1, 2 }
             },
             new Question
             {
-                questionText = "Which component is essential for rendering UI elements in Unity?",
-                answers = new string[] { "Canvas", "Event System", "RectTransform", "Graphic Raycaster" },
-                correctAnswers = new int[] { 0, 2, 3 }
+                questionText = "Ko nodrošina toggle poga?",
+                answers = new string[] { "Tikai vizuālam izskatam", 
+                               "Ļauj lietotājam viegli ieslēgt vai izslēgt noteiktus funkcionalitātes aspektus", 
+                               "Nodrošina iespēju veikt izvēli starp vairākiem izkrītošiem variantiem", 
+                               "Var izmantot, lai izvēlētos starp diviem alternatīviem stāvokļiem, piemēram, ieslēgt/izslēgt skaņu" },
+                correctAnswers = new int[] { 1, 3 }
             },
             new Question
             {
-                questionText = "What property is used to change the text color of a UI Text component?",
-                answers = new string[] { "Color", "FontStyle", "TextColor", "Font" },
-                correctAnswers = new int[] { 0 }
-            },
-            new Question
-            {
-                questionText = "Which of the following allows for responsive UI design in Unity?",
-                answers = new string[] { "Canvas Scaler", "Anchor Presets", "RectTransform", "Layout Groups" },
-                correctAnswers = new int[] { 0, 1, 3 }
-            },
-            new Question
-            {
-                questionText = "How can you create a drop-down menu in Unity UI?",
-                answers = new string[] { "Using the Dropdown component", "Using the Canvas component", "Using the EventSystem component", "Using the Input Field component" },
-                correctAnswers = new int[] { 0 }
-            },
-            new Question
-            {
-                questionText = "What is the best way to handle multiple resolutions for UI in Unity?",
-                answers = new string[] { "Using Canvas Scaler", "Using multiple Canvases", "Using fixed sizes", "Using dynamic anchors" },
-                correctAnswers = new int[] { 0, 3 }
+                questionText = "Ko dara Panel elements?",
+                answers = new string[] { "Padara vizuāli skaistāku programmu", "Tas var kalpot kā konteineris priekš organizēšanas", 
+                                        "Aprēķina Skriptu skaitu", "Izmantoto, lai radītu fiziskus 3D modeļu" },
+                correctAnswers = new int[] { 0, 1 }
             }
         };
     }
