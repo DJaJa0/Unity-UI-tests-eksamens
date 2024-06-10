@@ -17,6 +17,8 @@ public class Quizz : MonoBehaviour
     public Toggle[] answerToggles; // UI elementiem, kur lietotājs izvēlas atbildes
     public Button submitButton;
     public Text resultText;
+    public GameObject ResultPanel;
+    public Button retryButton;
 
     private int currentQuestionIndex = 0;
     private int correctAnswerCount = 0;
@@ -27,6 +29,8 @@ public class Quizz : MonoBehaviour
         InitializeQuestions();
         DisplayQuestion();
         submitButton.onClick.AddListener(CheckAnswer);
+        retryButton.onClick.AddListener(RestartQuiz);
+        ResultPanel.SetActive(false);
     }
 
     void InitializeQuestions()
@@ -45,7 +49,7 @@ public class Quizz : MonoBehaviour
                 answers = new string[] { "Lietotāja saskarne", "Videospēle", "User Interface", "Mājaslapa" },
                 correctAnswers = new int[] { 0, 2 }
             },
-            // Pievienojiet vēl 8 jautājumus
+            
             new Question
             {
                 questionText = "Ko dara Input lauks?",
@@ -167,16 +171,29 @@ public class Quizz : MonoBehaviour
 
     void ShowResults()
     {
-        resultText.text = "You answered " + correctAnswerCount + " questions correctly.\n";
+        resultText.text = "Atbildēji uz " + correctAnswerCount + " jautājumiem pareizi.\n";
 
         if (incorrectQuestions.Count > 0)
         {
-            resultText.text += "Incorrectly answered questions:\n";
+            resultText.text += "Nepareizi atbildētie jautājumi:\n";
             foreach (int index in incorrectQuestions)
             {
                 resultText.text += (index + 1) + ". " + questions[index].questionText + "\n";
             }
         }
+
+        ResultPanel.SetActive(true);
+
+        }
+
+        void RestartQuiz()
+    {
+        correctAnswerCount = 0;
+        currentQuestionIndex = 0;
+        incorrectQuestions.Clear();
+        ResultPanel.SetActive(false);
+        DisplayQuestion();
+
     }
 }
 
